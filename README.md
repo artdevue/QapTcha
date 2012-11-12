@@ -3,14 +3,15 @@
 <table>
   <tr>
     <td><img src="http://www.artdevue.com/temp/img/2a003d73f1.jpg"></td><td valign="middle">
-    Original article
-    [Home Page QapTcha](http://www.myjqueryplugins.com/QapTcha)
+    Original article<br/>
+    [Home Page QapTcha](http://www.myjqueryplugins.com/QapTcha)<br/>
     [Online Demo QapTcha](http://www.myjqueryplugins.com/QapTcha/demo)
     </td>
   </tr>
 </table>
 
 **Snippet written spontaneously August 8, 2011, the original article [here](http://community.modx-cms.ru/blog/addons/2152.html)**
+## Download [Here](http://github.com/artdevue/QapTcha/downloads)
 
 <img src="http://www.artdevue.com/temp/img/8607861e38.jpg">
 
@@ -23,12 +24,16 @@
 ```
 #### Full call -
 ```php
-[[!Qaptcha? &disabledSubmit=`false` &txtLock=`Заблокирована: форма не может быть отправлена` &txtUnlock=`Разблокирована: форма может быть отправлена`]]
+[[!Qaptcha?
+    &disabledSubmit=`false`
+    &txtLock=`Заблокирована: форма не может быть отправлена`
+    &txtUnlock=`Разблокирована: форма может быть отправлена`
+]]
 ```
 ### Parameters:
-disabledSubmit — by default `true`,
-txtLock — by default `Locked: form can't be submited`,
-txtUnlock — by default `Unlocked: form can be submited`
+* disabledSubmit — by default ** true **,
+* txtLock — by default ** Locked: form can't be submited **,
+* txtUnlock — by default ** Unlocked: form can be submited **
 
 ### We put a placeholder before pressing submit.
 ```php
@@ -41,14 +46,10 @@ In calling the form, put
 
 ## Example Call Register
 ```html
-[[!Qaptcha?
-    &disabledSubmit=`false`
-    &txtLock=`Заблокирована: форма не может быть отправлена`
-    &txtUnlock=`Разблокирована: форма может быть отправлена`
-]]
+[[!Qaptcha? &disabledSubmit=`false` &txtLock=`Заблокирована: форма не может быть отправлена` &txtUnlock=`Разблокирована: форма может быть отправлена`]]
 [[!Register?
     &preHooks=`validQaptcha`
-    &submitVar=`registerbtn`
+    &submitVar=`registerbtn`     
     &activationResourceId=`4`
     &activationEmailTpl=`myActivationEmailTpl`
     &activationEmailSubject=`Thanks for Registering!`
@@ -64,42 +65,43 @@ In calling the form, put
 ]]
 <div class="register">
     <div class="registerMessage">[[!+reg.error.message]]</div>
-
+ 
     <form class="form" action="[[~[[*id]]]]" method="post">
         <input type="hidden" name="nospam" value="[[!+reg.nospam]]" />
-
+ 
         <label for="username">[[%register.username? &namespace=`login` &topic=`register`]]
             <span class="error">[[!+reg.error.username]]</span>
         </label>
         <input type="text" name="username" id="username" value="[[!+reg.username]]" />
-
+ 
         <label for="password">[[%register.password]]
             <span class="error">[[!+reg.error.password]]</span>
         </label>
         <input type="password" name="password" id="password" value="[[!+reg.password]]" />
-
+ 
         <label for="password_confirm">[[%register.password_confirm]]
             <span class="error">[[!+reg.error.password_confirm]]</span>
         </label>
         <input type="password" name="password_confirm" id="password_confirm" value="[[!+reg.password_confirm]]" />
-
+ 
         <label for="fullname">[[%register.fullname]]
             <span class="error">[[!+reg.error.fullname]]</span>
         </label>
         <input type="text" name="fullname" id="fullname" value="[[!+reg.fullname]]" />
-
+ 
         <label for="email">[[%register.email]]
             <span class="error">[[!+reg.error.email]]</span>
         </label>
         <input type="text" name="email" id="email" value="[[!+reg.email]]" />
-
+ 
         <br class="clear" />
-
+ 
         <div class="form-buttons">
             [[+btQaptcha]]
             <input type="submit" name="registerbtn" value="Register" />
         </div>
     </form>
+</div>
 ```
 
 ### Authors

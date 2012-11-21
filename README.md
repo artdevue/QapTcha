@@ -13,8 +13,6 @@
 **Snippet written thoroughtfully on August 8th, 2011, the original article [here](http://community.modx-cms.ru/blog/addons/2152.html)**
 ## Download [Here](http://github.com/artdevue/QapTcha/downloads)
 
-<img src="http://www.artdevue.com/temp/img/8607861e38.jpg">
-
 ## Quick Start
 
 ### We put a challenge before the captcha form below:

@@ -10,7 +10,7 @@
   </tr>
 </table>
 
-**Snippet written spontaneously August 8, 2011, the original article [here](http://community.modx-cms.ru/blog/addons/2152.html)**
+**Snippet written thoroughtfully on August 8th, 2011, the original article [here](http://community.modx-cms.ru/blog/addons/2152.html)**
 ## Download [Here](http://github.com/artdevue/QapTcha/downloads)
 
 <img src="http://www.artdevue.com/temp/img/8607861e38.jpg">
@@ -26,18 +26,15 @@
 ```php
 [[!Qaptcha?
     &disabledSubmit=`false`
-    &txtLock=`Заблокирована: форма не может быть отправлена`
-    &txtUnlock=`Разблокирована: форма может быть отправлена`
 ]]
 ```
 ### Parameters:
 * disabledSubmit — by default ** true **,
-* txtLock — by default ** Locked: form can't be submited **,
-* txtUnlock — by default ** Unlocked: form can be submited **
+
 
 ### We put a placeholder before pressing submit.
 ```php
-[[+btQaptcha]]
+[[+qaptcha.Slider]]
 ```
 In calling the form, put
 ```php
@@ -97,7 +94,7 @@ In calling the form, put
         <br class="clear" />
  
         <div class="form-buttons">
-            [[+btQaptcha]]
+            [[+qaptcha.Slider]]
             <input type="submit" name="registerbtn" value="Register" />
         </div>
     </form>

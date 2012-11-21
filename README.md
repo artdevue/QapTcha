@@ -2,7 +2,7 @@
 ========
 <table>
   <tr>
-    <td><img src="http://www.artdevue.com/temp/img/2a003d73f1.jpg"></td><td valign="middle">
+    <td><img src="http://artdevue.github.com/img/grumpy_qaptcha.jpg"></td><td valign="middle">
     Original article<br/>
     [Home Page QapTcha](http://www.myjqueryplugins.com/QapTcha)<br/>
     [Online Demo QapTcha](http://www.myjqueryplugins.com/QapTcha/demo)

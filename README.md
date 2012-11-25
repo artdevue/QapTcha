@@ -15,12 +15,12 @@
 
 ## Quick Start
 
-### We put a challenge before the captcha form below:
+### Use of snippet:
 #### A simple call —
 ```php
 [[!Qaptcha]]
 ```
-#### Full call -
+#### Optionally you can use some parameters -
 ```php
 [[!Qaptcha?
     &disabledSubmit=`false`
@@ -30,16 +30,16 @@
 * disabledSubmit — by default ** true **,
 
 
-### We put a placeholder before pressing submit.
+### Put Slider before pressing submit via placeholder:
 ```php
 [[+qaptcha.Slider]]
 ```
-In calling the form, put
+When using with Register snippet you need to add preHook validCaptcha:
 ```php
 &preHooks=`validQaptcha`
 ```
 
-## Example Call Register
+## For example Register snippet call:
 ```html
 [[!Qaptcha? &disabledSubmit=`false` &txtLock=`Заблокирована: форма не может быть отправлена` &txtUnlock=`Разблокирована: форма может быть отправлена`]]
 [[!Register?
@@ -103,5 +103,11 @@ In calling the form, put
 <table>
   <tr>
     <td><img src="http://www.gravatar.com/avatar/39ef1c740deff70b054c1d9ae8f86d02?s=60"></td><td valign="middle">Valentin Rasulov<br>artdevue.com<br><a href="http://artdevue.com">http://artdevue.com</a></td>
+  </tr>
+</table>
+### Contributor
+<table>
+  <tr>
+    <td><img src="http://www.gravatar.com/avatar/555b37370f2e31559fc6b51c73c05f1f?s=80"></td><td valign="middle">Viktor Matushevskyi<br>MODX Webschool<br><a href="http://modx.ws">http://modx.ws</a></td>
   </tr>
 </table>
